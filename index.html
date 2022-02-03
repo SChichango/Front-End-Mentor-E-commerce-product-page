@@ -1,0 +1,271 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | E-commerce product page</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- Header -->
+      <div class="backdrop"></div>
+      <div class="backdrop-slider"></div>
+
+      <header>
+        <a href="javascript:void(0)" class="menu" onclick="offCanvas()"
+          ><img src="images/icon-menu.svg" alt="menu" class="menu"
+        /></a>
+        <img src="images/logo.svg" alt="Sneakers logo" id="logo" />
+        <nav id="offcanvas" class="nav__bar">
+          <a href="javascript:void(0)" onclick="closeCanvas()" class="closebtn"
+            ><img src="images/icon-close.svg" alt="" class="closebtn"
+          /></a>
+          <ul class="nav__links">
+            <li><a href="#" id="collections">Collections</a></li>
+            <li><a href="#" id="men">Men</a></li>
+            <li><a href="#" id="women">Women</a></li>
+            <li><a href="#" id="about">About</a></li>
+            <li><a href="#" id="contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="far-right">
+          <a href="#" class="cart"
+            ><img src="images/icon-cart.svg" alt="cart icon" />
+          </a>
+          <div class="cart__box">
+            <h4>Cart</h4>
+            <div class="cart__content empty">
+              <p>The cart is empty!</p>
+            </div>
+          </div>
+          <a href="#" class="avatar"
+            ><img
+              src="images/image-avatar.png"
+              alt="avatar icon"
+              class="avatar"
+          /></a>
+        </div>
+      </header>
+      <!-- backdrod slider -->
+      <div class="backdrop-slider__container">
+        <div class="backdrop__slider">
+          <a href="#" class="close__backdrop-slide"
+            ><<svg width="14" height="15" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z"
+                fill="#69707D"
+                fill-rule="evenodd"
+              /></svg
+          ></a>
+          <div class="img-slider fade bslider">
+            <img
+              src="images/image-product-1.jpg"
+              alt="Product 1"
+              style="width: 100%"
+            />
+          </div>
+          <div class="img-slider fade bslider">
+            <img
+              src="images/image-product-2.jpg"
+              alt="Product 2"
+              style="width: 100%"
+            />
+          </div>
+          <div class="img-slider fade bslider">
+            <img
+              src="images/image-product-3.jpg"
+              alt="Product 3"
+              style="width: 100%"
+            />
+          </div>
+          <div class="img-slider fade bslider">
+            <img
+              src="images/image-product-4.jpg"
+              alt="Product 4"
+              style="width: 100%"
+            />
+          </div>
+          <a href="#" class="prev bdrop" onclick="nextSlides(-1)"
+            ><img src="images/icon-previous.svg" alt="Previous"
+          /></a>
+          <a href="#" class="next bdrop" onclick="nextSlides(1)"
+            ><img src="images/icon-next.svg" alt="Next"
+          /></a>
+
+          <!-- Thumbnails -->
+          <div class="thumbnails">
+            <div class="thumbnail bthumbnail">
+              <img
+                src="images/image-product-1.jpg"
+                alt="Product 1"
+                style="width: 100%"
+                onclick="activeSlide(1)"
+              />
+            </div>
+            <div class="thumbnail bthumbnail">
+              <img
+                src="images/image-product-2.jpg"
+                alt="Product 2"
+                style="width: 100%"
+                onclick="activeSlide(2)"
+              />
+            </div>
+            <div class="thumbnail bthumbnail">
+              <img
+                src="images/image-product-3.jpg"
+                alt="Product 3"
+                style="width: 100%"
+                onclick="activeSlide(3)"
+              />
+            </div>
+            <div class="thumbnail bthumbnail">
+              <img
+                src="images/image-product-4.jpg"
+                alt="Product 4"
+                style="width: 100%"
+                onclick="activeSlide(4)"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Body -->
+      <div class="content__wrapper">
+        <div class="slider__wrapper">
+          <div class="img-slide fade">
+            <img
+              src="images/image-product-1.jpg"
+              alt="Product 1"
+              style="width: 100%"
+            />
+          </div>
+          <div class="img-slide fade">
+            <img
+              src="images/image-product-2.jpg"
+              alt="Product 2"
+              style="width: 100%"
+            />
+          </div>
+          <div class="img-slide fade">
+            <img
+              src="images/image-product-3.jpg"
+              alt="Product 3"
+              style="width: 100%"
+            />
+          </div>
+          <div class="img-slide fade">
+            <img
+              src="images/image-product-4.jpg"
+              alt="Product 4"
+              style="width: 100%"
+            />
+          </div>
+          <a href="#" class="prev" onclick="plusSlides(-1)"
+            ><img src="images/icon-previous.svg" alt="Previous"
+          /></a>
+          <a href="#" class="next" onclick="plusSlides(1)"
+            ><img src="images/icon-next.svg" alt="Next"
+          /></a>
+
+          <!-- Thumbnails -->
+          <div class="thumbnails">
+            <div class="thumbnail active">
+              <img
+                src="images/image-product-1.jpg"
+                alt="Product 1"
+                style="width: 100%"
+                onclick="currentSlide(1)"
+              />
+            </div>
+            <div class="thumbnail">
+              <img
+                src="images/image-product-2.jpg"
+                alt="Product 2"
+                style="width: 100%"
+                onclick="currentSlide(2)"
+              />
+            </div>
+            <div class="thumbnail">
+              <img
+                src="images/image-product-3.jpg"
+                alt="Product 3"
+                style="width: 100%"
+                onclick="currentSlide(3)"
+              />
+            </div>
+            <div class="thumbnail">
+              <img
+                src="images/image-product-4.jpg"
+                alt="Product 4"
+                style="width: 100%"
+                onclick="currentSlide(4)"
+              />
+            </div>
+          </div>
+        </div>
+
+        <article class="content">
+          <h3>Sneaker Company</h3>
+          <h1 class="title">Fall Limited Edition Sneakers</h1>
+          <p class="description">
+            These low-profile sneakers are your perfect casual wear companion.
+            Featuring a durable rubber outer sole, they’ll withstand everything
+            the weather can offer.
+          </p>
+          <div class="price-wrapper">
+            <div class="price-disc">
+              <h2 class="price">$125.00</h2>
+              <span class="discount">50%</span>
+            </div>
+            <span class="previous-price">$225</span>
+          </div>
+          <div class="buttons__wrap">
+            <div class="item-quantity">
+              <button class="decrement">
+                <img src="images/icon-minus.svg" alt="Decrement items" />
+              </button>
+              <input type="number" value="1" id="quantity" />
+              <button class="increment">
+                <img src="images/icon-plus.svg" alt="Increment items" />
+              </button>
+            </div>
+            <button class="add-to-cart">
+              <img src="images/icon-cart-button.svg" alt="cart icon" />Add to
+              cart
+            </button>
+          </div>
+        </article>
+      </div>
+
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">SChichango</a>.
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
